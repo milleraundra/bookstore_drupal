@@ -22,7 +22,7 @@ function kb_book_review_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Recent Book Reviews';
+  $handler->display->display_options['title'] = 'Reviews';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -61,6 +61,30 @@ function kb_book_review_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+
+  /* Display: Reviews */
+  $handler = $view->new_display('page', 'Reviews', 'page_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Book Author */
+  $handler->display->display_options['fields']['field_book_author']['id'] = 'field_book_author';
+  $handler->display->display_options['fields']['field_book_author']['table'] = 'field_data_field_book_author';
+  $handler->display->display_options['fields']['field_book_author']['field'] = 'field_book_author';
+  $handler->display->display_options['fields']['field_book_author']['label'] = '';
+  $handler->display->display_options['fields']['field_book_author']['element_label_colon'] = FALSE;
+  $handler->display->display_options['path'] = 'reviews';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Reviews';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['recent_book_reviews'] = $view;
 
   return $export;
