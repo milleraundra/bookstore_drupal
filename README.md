@@ -27,7 +27,7 @@ This is a simple Drupal 7 application for a small business. The site displays st
   * Password: review1
 
 ##Bugs
-CSS injector styles for the font-style of the main text are currently broken. 
+CSS injector styles for the font-style of the main text are currently broken. Styles will load when the admin or reviewer are logged in, but it does not load for anonymous users.
 
 ## Contact
 
