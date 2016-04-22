@@ -1,0 +1,7 @@
+name = KB Reviewer
+description = All permissions and roles to create book reviewer.
+core = 7.x
+package = Features
+dependencies[] = features
+features[features_api][] = api:2
+features[user_role][] = reviewer
