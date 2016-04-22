@@ -4,7 +4,7 @@
 <div <?php print danland_page_class($page['sidebar_first'], $page['sidebar_second']); ?>>
 <div id="header">
 <div id="header-wrapper">
-	<?php if ($logo): ?> 
+	<?php if ($logo): ?>
 		<div id="logo-wrapper">
 			<div class="logo">
 				<a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" /></a>
@@ -26,7 +26,7 @@
 			<?php endif; ?>
         	</div><!-- end branding wrapper -->
 	<?php endif; ?>
-	
+
 	<?php if ($page['search_box']): ?>
 		<div id="search-box">
 			<?php print render ($page['search_box']); ?>
@@ -53,9 +53,9 @@
 <div id="rounded-menu-left"></div>
  <?php if ($main_menu || $page['superfish_menu']): ?>
       <div id="<?php print $main_menu ? 'nav' : 'superfish' ; ?>">
-        <?php 
+        <?php
 					     if ($main_menu) {
-		          print theme('links__system_main_menu', array('links' => $main_menu));  
+		          print theme('links__system_main_menu', array('links' => $main_menu));
 				      }
 				      elseif (!empty($page['superfish_menu'])) {
 				        print render ($page['superfish_menu']);
@@ -80,9 +80,9 @@
 <?php if ($page['highlighted']) : ?><div id="slideshow-bottom">
 <div id="mission"><?php print render ($page['highlighted']); ?></div></div><?php endif; ?>
 <div class="slideshow">
-<img src="<?php print $base_path . $directory; ?>/images/slideshows/sea.jpg" width="950" height="355" alt="slideshow 1"/>
-<img src="<?php print $base_path . $directory; ?>/images/slideshows/noon.jpg" width="950" height="355" alt="slideshow 2"/>
-<img src="<?php print $base_path . $directory; ?>/images/slideshows/snow.jpg" width="950" height="355" alt="slideshow 3"/>
+<img src="<?php print $base_path . $directory; ?>/../../../default/files/book2.jpg" width="950" height="355" alt="glasses and book"/>
+<img src="<?php print $base_path . $directory; ?>/../../../default/files/books.jpg" width="950" height="355" alt="books"/>
+<img src="<?php print $base_path . $directory; ?>/../../../default/files/coffee.jpg" width="950" height="355" alt="latte, coffee, and donut"/>
 </div>
 </div>
 </div>
