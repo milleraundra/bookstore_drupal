@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the KB Book Review feature.
+ */
+
+include_once 'kb_book_review.features.inc';
